@@ -264,7 +264,11 @@ public class StatementsUtil {
     public long multOfEven(int x){
         long mult = 1;
         for (int i = 10; i<=x; i+=2){
+            if(i== 100){
+                break;
+            }
             mult *= i;
+
         }
         return mult;
     }
