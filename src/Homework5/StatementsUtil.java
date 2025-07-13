@@ -278,6 +278,11 @@ public class StatementsUtil {
 
     //18․ Գրել method, որը  ստանում է 5 - անիշ ամբողջ թիվ  և հաշվում  այդ թվի թվանշանների գումարը։
 
+    /**
+     * Calculates the sum of the digits of a given positive integer.
+     * @param x
+     * @return the sum of the digits of the input integer
+     */
 
     public int sumOfDigits(int x){
         int sum = 0;
