@@ -238,7 +238,7 @@ public class StatementsUtil {
     //15․ Գրել method, որը console -ից ստանում է  N թիվը և հաշվում է [1-N] բոլոր 5 -ի բաժանվող թվերի գումարը։
 
     /**
-     * Calculates and prints the sum of all multiples of 5 from 0 up to x (inclusive).
+     * Calculates and prints the sum of all multiples of 5 from 0 up to x (included).
      * @param x
      */
     public void sumNumMult5(int x){
@@ -253,9 +253,9 @@ public class StatementsUtil {
     //16. Գրել method, որը հաշվում է [1-N]  բոլոր  երկնիշ զույգ թվերի արտադրյալը։
 
     /**
-     * Calculates the product of all even numbers from 2 up to {@code x} (inclusive)
+     * Calculates the product of all even numbers from 2 up to {@code x} (included)
      * @param x
-     * @return the product of all even numbers from 2 up to {@code x} (inclusive)
+     * @return the product of all even numbers from 2 up to {@code x} (included)
      */
     public long multOfEven(int x){
         long mult = 1;
