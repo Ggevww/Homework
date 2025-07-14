@@ -200,7 +200,7 @@ public class StatementsUtil {
 
     //2 Հետո մի քիչ հեշտացրի
     public void printFirstDigitV2(int x){
-        while(x>10){
+        while(x>=10){
             x /= 10;
         }
         System.out.println(x);
