@@ -242,12 +242,8 @@ public class StatementsUtil {
      * @param x
      */
     public void sumNumMult5(int x){
-        while(x%5 != 0){
-            x--;
-        }
-        System.out.println(x);
         int sum = 0;
-        for (int j = 0; j<= x; j+=5){
+        for (int j = 5; j<= x; j+=5){
             sum += j;
         }
         System.out.println(sum);
