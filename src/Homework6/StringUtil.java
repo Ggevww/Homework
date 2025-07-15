@@ -322,6 +322,12 @@ public class StringUtil {
     //13. Գրել method, որը տրոհում է նախադսությունը ըստ  ‘,’   և գտում ամեներկար բառը ․
     //actual:  “We, are, living, in an, yellow, submarine, We don't,  have anything”
     //result:    have anything
+    /**
+     * Finds the longest word in a string that is split by a specified symbol.
+     * @param text the input string
+     * @param symbol the character used to split the string
+     * @return the longest word found in the string
+     */
     public static String longestWordBySymbol(String text, char symbol) {
         StringBuilder newText = new StringBuilder(text.replace(' ', symbol));
         System.out.println(newText);
