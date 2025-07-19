@@ -19,7 +19,9 @@ public class ArrayUtil {
         float[] f = {3.14f, -2.71f, 0.0f, 1.618f, -1.414f};
         System.out.println(smallestElement(f));
         //5
-
+        int[] m = {1, 2, 3, 4, 5};
+        int[] copiedArray = copyArray(m);
+        System.out.println(Arrays.toString(copiedArray));
         //6
         int[] array1 = {1, 5, 6, 4, 7};
         int[] array2 = {7, 4, 2, 3, 5};
@@ -135,11 +137,19 @@ public class ArrayUtil {
         }
         return min;
     }
-    //5 ․ Գրել method, որը int[] n array-ի էլեմենտները և տեղափոխում  int[] m  array-ի մեջ։
-
-
-
-
+    //5 ․ Գրել method, որը int[] n array-ի էլեմենտները տեղափոխում է int[] m  array-ի մեջ։
+    /**
+     * Copies elements from one integer array to another.
+     * @param x
+     * @return A new array containing the same elements as the input array.
+     */
+    public static int[] copyArray(int[] x) {
+        int[] y = new int[x.length];
+        for (int i = 0; i < x.length; i++) {
+            y[i] = x[i];
+        }
+        return y;
+    }
 
 
 
