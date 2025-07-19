@@ -49,6 +49,7 @@ public class StringUtil {
         //12
         System.out.println("Task 12");
         System.out.println(isNotEmpty(""));
+        System.out.println(isNotEmpty(null));
         System.out.println(isNotEmpty("Hello World"));
         //13
         System.out.println("Task 13");
