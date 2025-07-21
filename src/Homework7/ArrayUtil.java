@@ -346,7 +346,7 @@ public class ArrayUtil {
             maxStart = currentStart;
         }
         int[] result = new int[maxLength];
-        System.arraycopy(array, maxStart + 0, result, 0, maxLength);
+        System.arraycopy(array, maxStart, result, 0, maxLength);
         return result;
     }
 
