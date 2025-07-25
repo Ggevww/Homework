@@ -60,7 +60,8 @@ public class ArrayUtil {
         int[][] squareMatrix = {
             {2, 4, 6},
             {1, 3, 5},
-            {8, 10, 12}
+            {8, 10, 12},
+
         };
         System.out.println(checkRows(squareMatrix));
 
@@ -422,12 +423,12 @@ public class ArrayUtil {
             for(int j = 0; j < matrix[i].length; j++) {
                 sum += matrix[i][j];
             }
+            if(sum%2 != 0) {
+                return "No";
+            }
         }
-        if(sum%2 == 0) {
-            return "YES";
-        } else {
-            return "NO";
-        }
+        return "Yes";
+
     }
 
 
