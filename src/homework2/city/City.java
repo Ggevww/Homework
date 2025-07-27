@@ -1,4 +1,4 @@
-package Homework2.city;
+package homework2.city;
 
 public class City {
     char code;

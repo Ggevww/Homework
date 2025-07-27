@@ -1,6 +1,5 @@
-package Homework7;
+package homework7;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 

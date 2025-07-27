@@ -1,4 +1,4 @@
-package Homework2.rectangle;
+package homework2.rectangle;
 
 public class Rectangle {
     int length;

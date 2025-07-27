@@ -1,4 +1,4 @@
-package Homework2.car;
+package homework2.car;
 
 public class Car {
     char model;
