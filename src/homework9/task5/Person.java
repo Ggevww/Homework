@@ -1,5 +1,10 @@
 package homework9.task5;
 
+/**
+ * This class represents a person with a name, age, and height.
+ * It also includes a main method to demonstrate finding the oldest and tallest person
+ * from an array of Person objects using the HighestValue utility class.
+ */
 public class Person {
     private String name;
     private int age;
