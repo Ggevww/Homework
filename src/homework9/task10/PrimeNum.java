@@ -27,9 +27,9 @@ public class PrimeNum {
      * @return the next prime number after num
      */
     public static long nextPrimeNum(long num){
-        long result = num +1;
+        long result = num +2;
         while(!isPrime(result)){
-            result ++;
+            result += 2;
         }
         return result;
     }
