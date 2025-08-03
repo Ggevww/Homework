@@ -25,9 +25,9 @@ public class StaticUtil1 {
 }
 
 /**
- * testStaticUtil1 is a class that tests the StaticUtil1 class.
+ * TestStaticUtil1 is a class that tests the StaticUtil1 class.
  */
-class testStaticUtil1 {
+class TestStaticUtil1 {
     public static void main(String[] args) {
         System.out.println(StaticUtil1.getA());
 //        StaticUtil1.a;  doesn't compile

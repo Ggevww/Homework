@@ -48,7 +48,7 @@ public class GuessTheNum {
 /**
   * A test class to run the GuessTheNum game.
  */
-class testToGuess{
+class TestToGuess {
     public static void main(String[] args) {
         GuessTheNum.guessTheNum();
     }
