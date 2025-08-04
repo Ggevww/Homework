@@ -27,6 +27,9 @@ public class PrimeNum {
      * @return the next prime number after num
      */
     public static long nextPrimeNum(long num){
+        if(num == 2){
+            return 3;
+        }
         long result = num +2;
         while(!isPrime(result)){
             result += 2;
@@ -40,7 +43,7 @@ public class PrimeNum {
  * Test class for PrimeNum
  */
 class TestPrimeNum{
-    final static long x = 104729;
+    final static long x = 2;
 
     public static void main(String[] args) {
         System.out.println(PrimeNum.isPrime(x));

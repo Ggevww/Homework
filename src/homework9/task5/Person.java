@@ -38,5 +38,6 @@ public class Person {
         System.out.println("Oldest person: " + oldest.getName() + ", Age: " + oldest.getAge());
         Person tallest = (Person) HighestValue.getHighestByValue(people, "height");
         System.out.println("Tallest person: " + tallest.getName() + ", Height: " + tallest.getHeight());
+
     }
 }
