@@ -2,6 +2,10 @@ package homework10.system_design.task2;
 
 import java.util.Arrays;
 
+/**
+ * Course class representing a course with a name, capacity, and enrolled students.
+ * It includes methods to check enrollment eligibility, add students, and print course details.
+ */
 public class Course {
     private String courseName;
     private final int capacity;
