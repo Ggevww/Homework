@@ -5,8 +5,8 @@ package homework10.system_design.task1;
  * Provides methods to get the book's details and set its price.
  */
 public class Book {
-    private String title;
-    private String author;
+    private final String title;
+    private final String author;
     private double price;
 
     /**
@@ -28,17 +28,17 @@ public class Book {
     }
 
     /**
-     * Sets the title of the book.
+     * Gets the price of the book.
      *
-     * @param title the title to set
+     * @return the price of the book
      */
     public double getPrice(){
         return this.price;
     }
     /**
-     * Sets the author of the book.
+     * Sets the price of the book.
      *
-     * @param author the author to set
+     * @param price the new price of the book
      */
     public void setPrice(final double price ){
         this.price = price;
