@@ -41,7 +41,12 @@ public class Book {
      * @param price the new price of the book
      */
     public void setPrice(final double price ){
-        this.price = price;
+        if(price>0){
+            this.price = price;
+        }else {
+            this.price = 1500;
+        }
+
     }
 
     /**
@@ -54,7 +59,11 @@ public class Book {
     public Book(final String title, final String author, final double price){
         this.title = title;
         this.author = author;
-        this.price = price;
+        if(price>0){
+            this.price = price;
+        }else {
+            this.price = 1500;
+        }
     }
     /**
      * Constructs a Book with the specified title and author, and a default price of 1500.
