@@ -82,7 +82,7 @@ public class Course {
     public Course(String courseName, int capacity){
         this.courseName = courseName;
         if(capacity>0){
-            this. capacity = capacity;
+            this.capacity = capacity;
         }else {
             this.capacity = 30;
         }
