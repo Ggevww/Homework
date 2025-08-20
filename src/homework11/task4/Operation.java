@@ -1,5 +1,9 @@
 package homework11.task4;
 
+/**
+ * An enum representing basic arithmetic operations.
+ * Each operation can be applied to two integers.
+ */
 public enum Operation {
     ADD{
         @Override
@@ -30,5 +34,11 @@ public enum Operation {
     };
 
 
+    /**
+     * Applies the operation to two integers.
+     * @param a the first integer
+     * @param b the second integer
+     * @return the result of the operation
+     */
     public abstract int apply(int a, int b);
 }

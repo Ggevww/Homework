@@ -1,5 +1,8 @@
 package homework11.task5;
 
+/**
+ * Enum representing different currencies with their full names, symbols, and countries.
+ */
 public enum Currency {
     USD("United States Dollar", '$', "United States"),
     EUR("Euro", '€', "European Union"),

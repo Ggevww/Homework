@@ -1,5 +1,9 @@
 package homework11.task3;
 
+/**
+ * Enum representing the states of a traffic light.
+ * Each state can transition to the next state in the sequence.
+ */
 public enum TrafficLight {
     RED{
         @Override
@@ -20,5 +24,9 @@ public enum TrafficLight {
         }
     };
 
+    /**
+     * Returns the next traffic light state in the sequence.
+     * @return the next TrafficLight state
+     */
     public abstract TrafficLight getNextLight();
 }

@@ -1,5 +1,8 @@
 package homework11.task7;
 
+/**
+ * Enum representing different sizes of coffee with a method to print the name and ordinal value.
+ */
 public enum CoffeeSize {
     SMALL{
         @Override
@@ -21,5 +24,8 @@ public enum CoffeeSize {
     };
 
 
+    /**
+     * Abstract method to be implemented by each enum constant to print its name and ordinal value.
+     */
     public abstract void nameIndex();
 }

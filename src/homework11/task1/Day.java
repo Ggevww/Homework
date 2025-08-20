@@ -1,5 +1,8 @@
 package homework11.task1;
 
+/**
+ * Enum representing the days of the week.
+ */
 public enum Day {
     MONDAY("Monday"),
     TUESDAY("Tuesday"),
