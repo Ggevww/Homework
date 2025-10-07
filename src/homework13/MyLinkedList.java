@@ -2,10 +2,14 @@ package homework13;
 
 import java.util.* ;
 
+/** * A custom implementation of a doubly linked list.
+ */
 public class MyLinkedList<E> implements List<E> {
     Node<E> head;
     Node<E> tail;
     int size;
+    /** A private static inner class representing a node in the linked list.
+     */
     static class Node<E> {
         E data;
         Node<E> next;
@@ -37,6 +41,10 @@ public class MyLinkedList<E> implements List<E> {
         size = 0;
         this.addAll(Arrays.asList(array));
     }
+    /** A private helper method to get the node at a specific index.
+     * @param index the index of the node to retrieve
+     * @return the node at the specified index
+     */
     private Node<E> getNode(int index) {
         Node<E> x;
         if (index < (size / 2)) {
@@ -54,17 +62,29 @@ public class MyLinkedList<E> implements List<E> {
     }
 
 
-
+/**     * Returns the number of elements in this list.
+     *
+     * @return the number of elements in this list
+     */
     @Override
     public int size() {
         return size;
     }
 
+    /**
+     * Returns true if this list contains no elements.
+     * @return true if this list contains no elements
+     */
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * Returns true if this list contains the specified element.
+     * @param o element whose presence in this list is to be tested
+     * @return true if this list contains the specified element
+     */
     @Override
     public boolean contains(Object o) {
         if(o == null) {
@@ -79,6 +99,10 @@ public class MyLinkedList<E> implements List<E> {
         return false;
     }
 
+    /**
+     * Returns an iterator over the elements in this list in proper sequence.
+     * @return an iterator over the elements in this list in proper sequence
+     */
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
@@ -100,6 +124,10 @@ public class MyLinkedList<E> implements List<E> {
         };
     }
 
+    /**
+     * Returns an array containing all of the elements in this list in proper sequence (from first to last element).
+     * @return an array containing all of the elements in this list in proper sequence
+     */
     @Override
     public Object[] toArray() {
         Object[] result = new Object[size];
@@ -115,6 +143,11 @@ public class MyLinkedList<E> implements List<E> {
         return null;
     }
 
+    /**
+     * Appends the specified element to the end of this list.
+     * @param e element to be appended to this list
+     * @return true (as specified by Collection.add(E))
+     */
     @Override
     public boolean add(E e) {
         Node<E> newNode = new Node<>(e);
@@ -129,6 +162,11 @@ public class MyLinkedList<E> implements List<E> {
         return true;
     }
 
+    /**
+     * Removes the first occurrence of the specified element from this list, if it is present.
+     * @param o element to be removed from this list, if present
+     * @return true if this list contained the specified element
+     */
     @Override
     public boolean remove(Object o) {
         if (o == null) {
@@ -185,6 +223,11 @@ public class MyLinkedList<E> implements List<E> {
         return false;
     }
 
+    /**
+     * Returns true if this list contains all of the elements of the specified collection.
+     * @param c collection to be checked for containment in this list
+     * @return true if this list contains all of the elements of the specified collection
+     */
     @Override
     public boolean containsAll(Collection<?> c) {
         for (Object element : c) {
@@ -195,6 +238,11 @@ public class MyLinkedList<E> implements List<E> {
         return true;
     }
 
+    /**
+     * Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator.
+     * @param c collection containing elements to be added to this list
+     * @return true if this list changed as a result of the call
+     */
     @Override
     public boolean addAll(Collection<? extends E> c) {
         for (E element : c) {
@@ -203,6 +251,12 @@ public class MyLinkedList<E> implements List<E> {
         return true;
     }
 
+    /**
+     * Inserts all of the elements in the specified collection into this list at the specified position (optional operation).
+     * @param index index at which to insert the first element from the specified collection
+     * @param c collection containing elements to be added to this list
+     * @return true if this list changed as a result of the call
+     */
     @Override
     public boolean addAll(int index, Collection<? extends E> c) {
         if (index < 0 || index > size) {
@@ -214,6 +268,11 @@ public class MyLinkedList<E> implements List<E> {
         return true;
     }
 
+    /**
+     * Removes from this list all of its elements that are contained in the specified collection (optional operation).
+     * @param c collection containing elements to be removed from this list
+     * @return true if this list changed as a result of the call
+     */
     @Override
     public boolean removeAll(Collection<?> c) {
         boolean modified = false;
@@ -225,11 +284,19 @@ public class MyLinkedList<E> implements List<E> {
         return modified;
     }
 
+    /**
+     * Retains only the elements in this list that are contained in the specified collection (optional operation).
+     * @param c collection containing elements to be retained in this list
+     * @return true if this list changed as a result of the call
+     */
     @Override
     public boolean retainAll(Collection<?> c) {
         return false;
     }
 
+    /**
+     * Removes all of the elements from this list. The list will be empty after this call returns.
+     */
     @Override
     public void clear() {
         Node<E> x = head;
@@ -248,6 +315,12 @@ public class MyLinkedList<E> implements List<E> {
         size = 0;
     }
 
+    /**
+     * Returns the element at the specified position in this list.
+     * @param index index of the element to return
+     * @return the element at the specified position in this list
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size())
+     */
     @Override
     public E get(int index) {
         if (index < 0 || index >= size) {
@@ -256,6 +329,13 @@ public class MyLinkedList<E> implements List<E> {
         return getNode(index).data;
     }
 
+    /**
+     * Replaces the element at the specified position in this list with the specified element.
+     * @param index index of the element to replace
+     * @param element element to be stored at the specified position
+     * @return the element previously at the specified position
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size())
+     */
     @Override
     public E set(int index, E element) {
         if( index < 0 || index >= size) {
@@ -268,6 +348,12 @@ public class MyLinkedList<E> implements List<E> {
 
     }
 
+    /**
+     * Inserts the specified element at the specified position in this list.
+     * @param index index at which the specified element is to be inserted
+     * @param element element to be inserted
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size())
+     */
     @Override
     public void add(int index, E element) {
         if (index < 0 || index > size) {
@@ -297,6 +383,12 @@ public class MyLinkedList<E> implements List<E> {
 
     }
 
+    /**
+     * Removes the element at the specified position in this list.
+     * @param index the index of the element to be removed
+     * @return the element that was removed from the list
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size())
+     */
     @Override
     public E remove(int index) {
         if (index < 0 || index >= size) {
@@ -323,6 +415,11 @@ public class MyLinkedList<E> implements List<E> {
         return object.data;
     }
 
+    /**
+     * Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
+     * @param o element to search for
+     * @return the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element
+     */
     @Override
     public int indexOf(Object o) {
         int index = 0;
@@ -344,6 +441,11 @@ public class MyLinkedList<E> implements List<E> {
         return -1;
     }
 
+    /**
+     * Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element.
+     * @param o element to search for
+     * @return the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element
+     */
     @Override
     public int lastIndexOf(Object o) {
         int index = size - 1;
