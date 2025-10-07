@@ -2,7 +2,7 @@ package homework13.test;
 
 import homework13.MyArrayList;
 
-public class ASTest {
+public class ALTest {
     public static void main(String[] args) {
         MyArrayList list = new MyArrayList();
         System.out.println("Initial size: " + list.size()); // Expected: 0
