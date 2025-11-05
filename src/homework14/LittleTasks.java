@@ -132,7 +132,7 @@ public class LittleTasks {
         String parenthesesString2 = "{[(])}";
         boolean areParenthesesBalanced2 = tasks.checkParentheses2(parenthesesString2);
         System.out.println("Are parentheses in \"" + parenthesesString2 + "\" balanced? " + areParenthesesBalanced2);
-
+        System.out.println("Little tests");
 
     }
 }
